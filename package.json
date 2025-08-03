@@ -1,0 +1,30 @@
+{
+  "name": "katnip-syntax-highlighting",
+  "displayName": "Katnip Syntax Highlighting",
+  "description": "Syntax highlighting and language configuration for Katnip (.knip) files",
+  "version": "0.0.1",
+  "publisher": "your-name-or-username",
+  "engines": {
+    "vscode": "^1.102.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "katnip",
+        "aliases": ["Katnip", "katnip"],
+        "extensions": [".knip"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "katnip",
+        "scopeName": "source.katnip",
+        "path": "./syntaxes/katnip.tmLanguage.json"
+      }
+    ]
+  }
+}

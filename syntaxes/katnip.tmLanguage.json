@@ -1,0 +1,158 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Katnip",
+    "scopeName": "source.katnip",
+    "patterns": [
+        { "include": "#comments" },
+        { "include": "#procedures" },
+        { "include": "#annotations" },
+        { "include": "#namespaceCommands" },
+        { "include": "#keywords" },
+        { "include": "#constants" },
+        { "include": "#numbers" },
+        { "include": "#strings" },
+        { "include": "#operators" },
+        { "include": "#identifiers" },
+        { "include": "#brackets" }
+    ],
+    "repository": {
+        "comments": {
+			"patterns": [
+				{
+					"name": "comment.block.katnip",
+					"begin": "#>",
+					"end": "<#"
+				},
+				{
+					"name": "comment.block.collapsed.katnip",
+					"begin": "#<",
+					"end": ">#"
+				},
+				{
+					"name": "comment.block.excluded.katnip",
+					"begin": "#\\[",
+					"end": "]#"
+				},
+				{
+					"name": "comment.line.excluded.katnip",
+					"match": "#!.*$"
+				},
+				{
+					"name": "comment.line.katnip",
+					"match": "#(?=[^!<\\[]).*"
+				}
+			]
+		},
+        "procedures": {
+            "patterns": [
+                {
+                    "name": "keyword.declaration.procedure.katnip",
+                    "match": "\\bdef:\\s+[a-zA-Z_\\-][\\w\\-]*"
+                }
+            ]
+        },
+        "annotations": {
+            "patterns": [
+                {
+                    "name": "storage.modifier.annotation.katnip",
+                    "match": "@[a-zA-Z_][\\w_]*"
+                }
+            ]
+        },
+        "namespaceCommands": {
+            "patterns": [
+                {
+                    "name": "support.function.namespace.katnip",
+                    "match": "\\b[a-zA-Z_][\\w_]*(?:\\.[a-zA-Z_][\\w_]*)+(?=\\s*\\()"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.katnip",
+                    "match": "\\b(if|while|for|return)\\b"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.language.katnip",
+                    "match": "\\b(?:const|enum)\\.[a-zA-Z_]\\w*\\b"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.hex.katnip",
+                    "match": "[+\\-]?0x[0-9a-fA-F]+\\b"
+                },
+                {
+                    "name": "constant.numeric.octal.katnip",
+                    "match": "[+\\-]?0o[0-7]+\\b"
+                },
+                {
+                    "name": "constant.numeric.binary.katnip",
+                    "match": "[+\\-]?0b[01]+\\b"
+                },
+                {
+                    "name": "constant.numeric.katnip",
+                    "match": "\\b[+\\-]?(?:\\d+(?:_\\d+)*(?:\\.\\d+(_\\d+)*)?|\\.\\d+)([eE][+\\-]?\\d+)?\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.katnip",
+                    "begin": "f?\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "variable.interpolation.katnip",
+                            "match": "\\{[^}]+\\}"
+                        },
+                        {
+                            "name": "constant.character.escape.katnip",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.katnip",
+                    "match": "(\\+\\+|--|==|!=|<=|>=|<|>|\\+|-|\\*\\*|\\*|/|%|&&|\\|\\||!&|!\\||\\^|!\\^|\\.\\.|\\.\\.\\<)"
+                },
+                {
+                    "name": "keyword.operator.assignment.katnip",
+                    "match": "(=|\\+=|-=|\\*=|/=|%=|\\*\\*=|//)"
+                }
+            ]
+        },
+        "identifiers": {
+            "patterns": [
+                {
+                    "name": "variable.other.katnip",
+                    "match": "\\b[\\p{L}_\\-][\\p{L}0-9_\\-]*\\b"
+                }
+            ]
+        },
+        "brackets": {
+            "patterns": [
+                {
+                    "name": "punctuation.bracket.katnip",
+                    "match": "[\\{\\}\\(\\)\\[\\]]"
+                },
+                {
+                    "name": "punctuation.delimiter.katnip",
+                    "match": "[,:]"
+                }
+            ]
+        }
+    }
+}
