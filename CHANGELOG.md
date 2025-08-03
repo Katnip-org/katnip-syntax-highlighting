@@ -9,11 +9,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release
 
-## V.1
+## v0.0.1
 
 ### Added
-- All highlighting support
+- fString support
 
 ### Changed
 
 ### Removed
+- Default getting started md

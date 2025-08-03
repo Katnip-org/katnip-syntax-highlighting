@@ -10,6 +10,7 @@
         { "include": "#keywords" },
         { "include": "#constants" },
         { "include": "#numbers" },
+        { "include": "#fstrings" },
         { "include": "#strings" },
         { "include": "#operators" },
         { "include": "#identifiers" },
@@ -103,17 +104,32 @@
                 }
             ]
         },
+        "fstrings": {
+            "name": "string.quoted.double.fstring.katnip",
+            "begin": "f\"",
+            "end": "\"",
+            "patterns": [
+                {
+                    "name": "constant.character.escape.katnip",
+                    "match": "\\\\."
+                },
+                {
+                    "name": "meta.interpolation.katnip",
+                    "begin": "\\{",
+                    "end": "\\}",
+                    "patterns": [
+                        { "include": "$self" } 
+                    ]
+                }
+            ]
+        },
         "strings": {
             "patterns": [
                 {
                     "name": "string.quoted.double.katnip",
-                    "begin": "f?\"",
+                    "begin": "\"",
                     "end": "\"",
                     "patterns": [
-                        {
-                            "name": "variable.interpolation.katnip",
-                            "match": "\\{[^}]+\\}"
-                        },
                         {
                             "name": "constant.character.escape.katnip",
                             "match": "\\\\."
