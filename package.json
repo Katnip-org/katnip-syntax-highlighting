@@ -3,7 +3,12 @@
   "displayName": "Katnip Syntax Highlighting",
   "description": "Syntax highlighting and language configuration for Katnip (.knip) files",
   "version": "0.0.1",
-  "publisher": "your-name-or-username",
+  "license": "GPL-3.0-or-later",
+  "publisher": "b1j2754",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Katnip-org/katnip-syntax-highlighting.git"
+  },
   "engines": {
     "vscode": "^1.102.0"
   },
