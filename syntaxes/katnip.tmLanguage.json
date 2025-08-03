@@ -72,7 +72,7 @@
             "patterns": [
                 {
                     "name": "keyword.control.katnip",
-                    "match": "\\b(if|while|for|return)\\b"
+                    "match": "\\b(if|while|for|return|else|enumerate|range|repeat|repeatUntil)\\b"
                 }
             ]
         },

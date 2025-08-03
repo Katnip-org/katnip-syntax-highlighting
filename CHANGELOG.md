@@ -18,3 +18,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Removed
 - Default getting started md
+
+## v0.0.2
+
+### Added
+- More keyword support, else, enumerate, range, repeat, repeatUntil
+
+### Changed
+
+### Removed
