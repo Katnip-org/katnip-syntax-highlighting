@@ -48,7 +48,7 @@
             "patterns": [
                 {
                     "name": "keyword.declaration.procedure.katnip",
-                    "match": "\\bdef:\\s+[a-zA-Z_\\-][\\w\\-]*"
+                    "match": "\\bproc:\\s+[a-zA-Z_\\-][\\w\\-]*"
                 }
             ]
         },
