@@ -36,3 +36,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changed "def" keyword to "proc"
 
 ### Removed
+
+## v0.0.4
+
+### Added
+- Added "Forever" as a recognized keyword
+
+### Changed
+
+### Removed

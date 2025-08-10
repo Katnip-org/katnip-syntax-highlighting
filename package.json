@@ -2,7 +2,7 @@
   "name": "katnip-syntax-highlighting",
   "displayName": "Katnip Syntax Highlighting",
   "description": "Syntax highlighting and language configuration for Katnip (.knip) files",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "GPL-3.0-or-later",
   "publisher": "b1j2754",
   "repository": {
