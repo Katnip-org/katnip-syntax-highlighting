@@ -45,3 +45,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 ### Removed
+
+## v0.0.5
+
+### Added
+- Added modifiers for variable declerations "private", "public", and "temp"
+
+### Changed
+
+### Removed

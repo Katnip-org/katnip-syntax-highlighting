@@ -8,6 +8,7 @@
         { "include": "#annotations" },
         { "include": "#namespaceCommands" },
         { "include": "#keywords" },
+        { "include": "#modifiers" },
         { "include": "#constants" },
         { "include": "#numbers" },
         { "include": "#fstrings" },
@@ -73,6 +74,14 @@
                 {
                     "name": "keyword.control.katnip",
                     "match": "\\b(if|while|for|return|else|enumerate|range|repeat|repeatUntil|forever)\\b"
+                }
+            ]
+        },
+        "modifiers": {
+            "patterns": [
+                {
+                    "name": "storage.modifier.katnip",
+                    "match": "\\b(private|public|temp)\\b"
                 }
             ]
         },
